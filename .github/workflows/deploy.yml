@@ -25,16 +25,14 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
-        working-directory: bragstudio
       - name: Build
         run: npm run build
-        working-directory: bragstudio
       - name: Add SPA fallback (404.html)
-        run: cp bragstudio/dist/index.html bragstudio/dist/404.html
+        run: cp dist/index.html dist/404.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: bragstudio/dist
+          path: dist
   deploy:
     environment:
       name: github-pages
