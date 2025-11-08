@@ -4,8 +4,8 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // Base path for GitHub Pages (adjust if repo name changes or if using user root repo)
-  base: "/bragstudio/",
+  // Remove base path for custom domain (GitHub Pages subdirectory not needed)
+  // base: "/bragstudio/",
   server: {
     host: "::",
     port: 8080,
